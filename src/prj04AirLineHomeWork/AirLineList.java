@@ -22,39 +22,37 @@ public class AirLineList {
 		System.out.println(airLines[i]);
 		}
 	}
-	// Название методов : (aaa,bbb,ccc) :	
-	//aaa) список рейсов для заданного пункта назначения;
-	//bbb) список рейсов для заданного дня недели;
-	//ccc) список рейсов для заданного дня недели, время вылета для которых больше заданного.
+	//(getFligthsByDestination) список рейсов для заданного пункта назначения;
+	//(getFlightsByDate) список рейсов для заданного дня недели;
+	//(getFlightsByDateAfterTime) список рейсов для заданного дня недели, время вылета для которых больше заданного.
 	
-	//aaa) список рейсов для заданного пункта назначения;
-	public AirLineList aaa (String Destination) {    
-		AirLineList aaa = new AirLineList ();
+	public AirLineList getFligthsByDestination (String Destination) {    
+		AirLineList getFligthsByDestination = new AirLineList ();
 		for (int i = 0; i < size(); i++) {
 				if(airLines[i].getDestination().equals(Destination)) {
 					System.out.println(airLines[i]);
 				}
 			}
-		return aaa ;
+		return getFligthsByDestination ;
 	}
-	//bbb) список рейсов для заданного дня недели;
-	public AirLineList bbb (int DayWeek) {    
-		AirLineList bbb = new AirLineList ();
+	
+	public AirLineList getFlightsByDate (int DayWeek) {    
+		AirLineList getFlightsByDate = new AirLineList ();
 		for (int i = 0; i < size(); i++) {
 				if(airLines[i].getDayWeek()==DayWeek) {
 					System.out.println(airLines[i]);
 				}
 			}
-		return bbb ;
+		return getFlightsByDate ;
 	}
-	//ccc) список рейсов для заданного дня недели, время вылета для которых больше заданного.
-	public AirLineList ccc (int DayWeek, int DepartureTime) {    
-		AirLineList ccc = new AirLineList ();
+	
+	public AirLineList getFlightsByDateAfterTime (int DayWeek, int DepartureTime) {    
+		AirLineList getFlightsByDate = new AirLineList ();
 		for (int i = 0; i < size(); i++) {
 				if(airLines[i].getDayWeek()==DayWeek && airLines[i].getDepartureTime()>DepartureTime ) {
 					System.out.println(airLines[i]);
 				}
 			}
-		return ccc ;
+		return getFlightsByDate ;
 	}
 }
